@@ -32,3 +32,17 @@ print()
 （Javaは文末にセミコロン記載するが、Pythonは違うので注意）
 '''
 print('Hello'); print('Python'); print('World!')
+
+# 複数行
+print('文字列1' 
+      '文字列2')
+
+print(
+      '''
+      複数行の
+      文字列表示\
+      ''')
+
+# エスケープシーケンスを使わない表記
+# rを先頭に記述すると文字列として\が使える
+print(r'C:\abc\aaa\bbb\ccc\path_sample.txt')
