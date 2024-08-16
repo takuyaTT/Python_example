@@ -5,8 +5,13 @@ valB = 'aaa'
 print(valA == valB) # True
 print(valA is valB) # True
 # id() -> メモリの番地を取得
-print('valAのメモリアドレス = ' + str(id(valA)))
-print('valBのメモリアドレス = ' + str(id(valB)))
+print('valAの値：' + valA + ' valAのメモリアドレス = ' + str(id(valA)))
+print('valBの値：' + valB + ' valBのメモリアドレス = ' + str(id(valB)))
+valA = valB
+valB = 'bbb'
+print('valAの値：' + valA + ' valAのメモリアドレス = ' + str(id(valA)))
+print('valBの値：' + valB + ' valBのメモリアドレス = ' + str(id(valB)))
+
 
 valC = 100
 valD = 100.0
@@ -30,3 +35,11 @@ print('合計' + str(int(total_price * TAX))) # 110
 del(valA)
 # 以下はエラーになる
 # print(valA)
+
+valE = 100
+valF = 100
+print('valEの値:' + str(valE) + ' valEのアドレス値：' + str(id(valE)))
+print('valFの値:' + str(valF) + ' valFのアドレス値：' + str(id(valF)))
+valE = 200
+print('valEの値:' + str(valE) + ' valEのアドレス値：' + str(id(valE)))
+print('valFの値:' + str(valF) + ' valFのアドレス値：' + str(id(valF)))

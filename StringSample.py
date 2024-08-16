@@ -37,3 +37,44 @@ print(len(str_a))
 print(21 - 6)
 print(str_a[-6]) 
 print(str_a[-6:-4])
+
+# upper
+str_upper = "upp"
+print(str_upper.upper()) # UPP
+
+# lower
+str_lower = "LOWER"
+print(str_lower.lower()) # lower
+
+# startswith
+# 指定した文字から始まる場合はTrueを返す
+str_start = "python"
+print(str_start.startswith('py')) # True
+
+# endswith
+# 指定した文字で終了する場合はTrueを返す
+str_end = "python_end"
+print(str_end.endswith('end')) # True
+
+# 複合例
+txt_file = "Sample.MD"
+print(txt_file.lower().endswith('.md')) # True
+
+# replace
+# 文字列置換。個数を指定できる
+rep_samp = "Java,JavaScript,Python"
+rep_res = rep_samp.replace('J', 'j')
+print(rep_res) # java,javaScript,Python
+rep_res = rep_samp.replace('J', 'j', 1)
+print(rep_res) # java,JavaScript,Python
+
+# 文字列検索
+# find -> 先頭から検索。該当なしの場合は-1を返す
+find_samp = "Java Python Ruby"
+print(find_samp.find('Python')) # 5
+# 先頭から空白までを抜き出して出力
+print(find_samp[:find_samp.find(' ')]) # Java
+# 先頭から空白の開始位置を取得し、末尾から空白までの開始位置を取得して、開始:終了を指定して出力
+print(find_samp[find_samp.find(' ')+1:find_samp.rfind(' ')]) # Python
+# 最後の空白開始位置を取得し、以降を抜き出して出力
+print(find_samp[find_samp.rfind(' ')+1:]) # Ruby
